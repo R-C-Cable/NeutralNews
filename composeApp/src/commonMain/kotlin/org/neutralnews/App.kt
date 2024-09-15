@@ -15,6 +15,7 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 
 import neutralnews.composeapp.generated.resources.Res
 import neutralnews.composeapp.generated.resources.compose_multiplatform
+import org.neutralnews.ui.HomeScreenViewModel
 
 @Composable
 @Preview
@@ -26,6 +27,7 @@ fun App() {
                 Text("Click me!")
             }
             AnimatedVisibility(showContent) {
+                val viewModel = HomeScreenViewModel()
                 val greeting = remember { Greeting().greet() }
                 Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
                     Image(painterResource(Res.drawable.compose_multiplatform), null)
