@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "org.neutralnews.app-mergeDebugResources-62:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "/home/robert/.gradle/caches/transforms-4/90556167c8198482c0b1b8be37d8a679/transformed/material-1.12.0/res/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,110",
+                        "endColumns": "54,61",
+                        "endOffsets": "105,167"
+                    }
+                }
+            ]
+        }
+    ]
+}

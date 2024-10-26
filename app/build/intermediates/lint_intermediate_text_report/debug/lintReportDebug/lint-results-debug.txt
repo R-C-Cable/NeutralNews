@@ -1,0 +1,139 @@
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:2: Warning: A newer version of com.android.application than 8.5.2 is available: 8.7.1 [AndroidGradlePluginVersion]
+agp = "8.5.2"
+      ~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:2: Warning: A newer version of com.android.application than 8.5.2 is available: 8.7.1 [AndroidGradlePluginVersion]
+agp = "8.5.2"
+      ~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:2: Warning: A newer version of com.android.application than 8.5.2 is available: 8.7.1 [AndroidGradlePluginVersion]
+agp = "8.5.2"
+      ~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
+
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:4: Warning: A newer version of org.jetbrains.kotlin.android than 1.9.25 is available: 2.0.20 [GradleDependency]
+kotlin = "1.9.25"
+         ~~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:4: Warning: A newer version of org.jetbrains.kotlin.android than 1.9.25 is available: 2.0.20 [GradleDependency]
+kotlin = "1.9.25"
+         ~~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:4: Warning: A newer version of org.jetbrains.kotlin.android than 1.9.25 is available: 2.0.20 [GradleDependency]
+kotlin = "1.9.25"
+         ~~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:4: Warning: A newer version of org.jetbrains.kotlin.plugin.serialization than 1.9.25 is available: 2.0.20 [GradleDependency]
+kotlin = "1.9.25"
+         ~~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:4: Warning: A newer version of org.jetbrains.kotlin.plugin.serialization than 1.9.25 is available: 2.0.20 [GradleDependency]
+kotlin = "1.9.25"
+         ~~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:4: Warning: A newer version of org.jetbrains.kotlin.plugin.serialization than 1.9.25 is available: 2.0.20 [GradleDependency]
+kotlin = "1.9.25"
+         ~~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:12: Warning: A newer version of androidx.compose.material:material than 1.5.4 is available: 1.7.4 [GradleDependency]
+materialVersion = "1.5.4"
+                  ~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:12: Warning: A newer version of androidx.compose.material:material than 1.5.4 is available: 1.7.4 [GradleDependency]
+materialVersion = "1.5.4"
+                  ~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:12: Warning: A newer version of androidx.compose.material:material than 1.5.4 is available: 1.7.4 [GradleDependency]
+materialVersion = "1.5.4"
+                  ~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:13: Warning: A newer version of androidx.navigation:navigation-compose than 2.7.5 is available: 2.8.3 [GradleDependency]
+navigationCompose = "2.7.5"
+                    ~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:13: Warning: A newer version of androidx.navigation:navigation-compose than 2.7.5 is available: 2.8.3 [GradleDependency]
+navigationCompose = "2.7.5"
+                    ~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:13: Warning: A newer version of androidx.navigation:navigation-compose than 2.7.5 is available: 2.8.3 [GradleDependency]
+navigationCompose = "2.7.5"
+                    ~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:18: Warning: A newer version of androidx.compose.ui:ui than 1.5.4 is available: 1.7.4 [GradleDependency]
+ui = "1.5.4"
+     ~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:18: Warning: A newer version of androidx.compose.ui:ui than 1.5.4 is available: 1.7.4 [GradleDependency]
+ui = "1.5.4"
+     ~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:18: Warning: A newer version of androidx.compose.ui:ui than 1.5.4 is available: 1.7.4 [GradleDependency]
+ui = "1.5.4"
+     ~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:18: Warning: A newer version of androidx.compose.ui:ui-tooling-preview than 1.5.4 is available: 1.7.4 [GradleDependency]
+ui = "1.5.4"
+     ~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:18: Warning: A newer version of androidx.compose.ui:ui-tooling-preview than 1.5.4 is available: 1.7.4 [GradleDependency]
+ui = "1.5.4"
+     ~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/gradle/libs.versions.toml:18: Warning: A newer version of androidx.compose.ui:ui-tooling-preview than 1.5.4 is available: 1.7.4 [GradleDependency]
+ui = "1.5.4"
+     ~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values-v23: Warning: This folder configuration (v23) is unnecessary; minSdkVersion is 28. Merge all the resources in this folder into values. [ObsoleteSdkInt]
+
+   Explanation for issues of type "ObsoleteSdkInt":
+   This check flags version checks that are not necessary, because the
+   minSdkVersion (or surrounding known API level) is already at least as high
+   as the version checked for.
+
+   Similarly, it also looks for resources in -vNN folders, such as values-v14
+   where the version qualifier is less than or equal to the minSdkVersion,
+   where the contents should be merged into the best folder.
+
+/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values/colors.xml:3: Warning: The resource R.color.black appears to be unused [UnusedResources]
+    <color name="black">#FF000000</color>
+           ~~~~~~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values/colors.xml:4: Warning: The resource R.color.white appears to be unused [UnusedResources]
+    <color name="white">#FFFFFFFF</color>
+           ~~~~~~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values/dimens.xml:2: Warning: The resource R.dimen.fab_margin appears to be unused [UnusedResources]
+    <dimen name="fab_margin">16dp</dimen>
+           ~~~~~~~~~~~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/menu/menu_main.xml:1: Warning: The resource R.menu.menu_main appears to be unused [UnusedResources]
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/navigation/nav_graph.xml:2: Warning: The resource R.navigation.nav_graph appears to be unused [UnusedResources]
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+^
+/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values/strings.xml:3: Warning: The resource R.string.action_settings appears to be unused [UnusedResources]
+    <string name="action_settings">Settings</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values/strings.xml:5: Warning: The resource R.string.first_fragment_label appears to be unused [UnusedResources]
+    <string name="first_fragment_label">First Fragment</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values/strings.xml:6: Warning: The resource R.string.second_fragment_label appears to be unused [UnusedResources]
+    <string name="second_fragment_label">Second Fragment</string>
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values/strings.xml:7: Warning: The resource R.string.next appears to be unused [UnusedResources]
+    <string name="next">Next</string>
+            ~~~~~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values/strings.xml:8: Warning: The resource R.string.previous appears to be unused [UnusedResources]
+    <string name="previous">Previous</string>
+            ~~~~~~~~~~~~~~~
+/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values/strings.xml:10: Warning: The resource R.string.lorem_ipsum appears to be unused [UnusedResources]
+    <string name="lorem_ipsum">
+            ~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+0 errors, 33 warnings
