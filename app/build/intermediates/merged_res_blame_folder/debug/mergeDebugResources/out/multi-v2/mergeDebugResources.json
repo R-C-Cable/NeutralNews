@@ -34,7 +34,7 @@
                     }
                 },
                 {
-                    "source": "/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values-v23/themes.xml",
+                    "source": "/home/robert/temp/NeutralNews/app/src/main/res/values-v23/themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -1738,7 +1738,7 @@
             "outputFile": "org.neutralnews.app-debug-64:/values-night-v8_values-night-v8.arsc.flat",
             "map": [
                 {
-                    "source": "/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values-night/themes.xml",
+                    "source": "/home/robert/temp/NeutralNews/app/src/main/res/values-night/themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -4506,7 +4506,7 @@
                     }
                 },
                 {
-                    "source": "/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values-land/dimens.xml",
+                    "source": "/home/robert/temp/NeutralNews/app/src/main/res/values-land/dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
@@ -5060,7 +5060,7 @@
             "outputFile": "org.neutralnews.app-debug-64:/values-w1240dp-v13_values-w1240dp-v13.arsc.flat",
             "map": [
                 {
-                    "source": "/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values-w1240dp/dimens.xml",
+                    "source": "/home/robert/temp/NeutralNews/app/src/main/res/values-w1240dp/dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
@@ -7667,7 +7667,7 @@
             "outputFile": "org.neutralnews.app-debug-64:/values-w600dp-v13_values-w600dp-v13.arsc.flat",
             "map": [
                 {
-                    "source": "/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values-w600dp/dimens.xml",
+                    "source": "/home/robert/temp/NeutralNews/app/src/main/res/values-w600dp/dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",
@@ -8102,25 +8102,6 @@
                     }
                 },
                 {
-                    "source": "/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "2,1,4,9,6,7,5",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "65,16,173,388,303,341,237",
-                        "endLines": "2,1,4,44,6,7,5",
-                        "endColumns": "52,48,63,13,37,45,65",
-                        "endOffsets": "113,60,232,3528,336,382,298"
-                    },
-                    "to": {
-                        "startLines": "1909,1911,1942,1948,2152,2159,2168",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "127964,128100,131248,131790,154951,155845,156556",
-                        "endLines": "1909,1911,1942,1983,2152,2159,2168",
-                        "endColumns": "52,48,63,13,37,45,65",
-                        "endOffsets": "128012,128144,131307,134930,154984,155886,156617"
-                    }
-                },
-                {
                     "source": "/home/robert/.gradle/caches/transforms-4/787757800fe2d3f358162fab52d6c3f8/transformed/viewpager2-1.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -8154,6 +8135,25 @@
                         "startOffsets": "117160",
                         "endColumns": "65",
                         "endOffsets": "117221"
+                    }
+                },
+                {
+                    "source": "/home/robert/temp/NeutralNews/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "2,1,4,9,6,7,5",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "65,16,173,388,303,341,237",
+                        "endLines": "2,1,4,44,6,7,5",
+                        "endColumns": "52,48,63,13,37,45,65",
+                        "endOffsets": "113,60,232,3528,336,382,298"
+                    },
+                    "to": {
+                        "startLines": "1909,1911,1942,1948,2152,2159,2168",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "127964,128100,131248,131790,154951,155845,156556",
+                        "endLines": "1909,1911,1942,1983,2152,2159,2168",
+                        "endColumns": "52,48,63,13,37,45,65",
+                        "endOffsets": "128012,128144,131307,134930,154984,155886,156617"
                     }
                 },
                 {
@@ -8284,23 +8284,6 @@
                     }
                 },
                 {
-                    "source": "/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values/dimens.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "41",
-                        "endOffsets": "53"
-                    },
-                    "to": {
-                        "startLines": "1025",
-                        "startColumns": "4",
-                        "startOffsets": "62477",
-                        "endColumns": "41",
-                        "endOffsets": "62514"
-                    }
-                },
-                {
                     "source": "/home/robert/.gradle/caches/transforms-4/cffbfd689ec4144b28b83744db3222ab/transformed/lifecycle-viewmodel-release/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -8354,6 +8337,59 @@
                     }
                 },
                 {
+                    "source": "/home/robert/temp/NeutralNews/app/src/main/res/values/dimens.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "41",
+                        "endOffsets": "53"
+                    },
+                    "to": {
+                        "startLines": "1025",
+                        "startColumns": "4",
+                        "startOffsets": "62477",
+                        "endColumns": "41",
+                        "endOffsets": "62514"
+                    }
+                },
+                {
+                    "source": "/home/robert/temp/NeutralNews/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,97",
+                        "endColumns": "41,41",
+                        "endOffsets": "92,134"
+                    },
+                    "to": {
+                        "startLines": "561,880",
+                        "startColumns": "4,4",
+                        "startOffsets": "29207,52883",
+                        "endColumns": "41,41",
+                        "endOffsets": "29244,52920"
+                    }
+                },
+                {
+                    "source": "/home/robert/temp/NeutralNews/app/src/main/res/values/themes.xml",
+                    "from": {
+                        "startLines": "2,7",
+                        "startColumns": "4,4",
+                        "startOffsets": "100,326",
+                        "endLines": "5,7",
+                        "endColumns": "12,70",
+                        "endOffsets": "320,392"
+                    },
+                    "to": {
+                        "startLines": "2607,6618",
+                        "startColumns": "4,4",
+                        "startOffsets": "185616,466576",
+                        "endLines": "2610,6618",
+                        "endColumns": "12,69",
+                        "endOffsets": "185730,466641"
+                    }
+                },
+                {
                     "source": "/home/robert/.gradle/caches/transforms-4/5444f5fe57bbabc3b351ee22ddd34208/transformed/cardview-1.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,35,36,37,38,45,47,50,7",
@@ -8389,42 +8425,6 @@
                         "endLines": "1847,2000,2001,2002,2003,2004,2005,2006,2007,2008,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2024,2025,2026,2027,2028,2029,2030,2031,2032,2033,2034,2035,2036,2037,2038,2039,2040,2041,2042,2043,2044,2045,2046,2047,2048,2049,2050,2051,2052,2053,2054,2055,2056,2057,2058,2059,2060,5607,5610",
                         "endColumns": "72,87,85,80,83,68,64,82,105,85,13,53,68,60,68,88,94,73,96,92,97,13,90,87,95,97,63,67,86,93,66,71,71,100,108,75,68,47,65,63,73,56,56,71,49,53,70,70,69,68,57,75,70,73,85,49,69,64,12,12",
                         "endOffsets": "123696,136935,137021,137102,137186,137255,137320,137403,137509,137595,137715,137769,137838,137899,137968,138057,138152,138226,138323,138416,138514,138663,138754,138842,138938,139036,139100,139168,139255,139349,139416,139488,139560,139661,139770,139846,139915,139963,140029,140093,140167,140224,140281,140353,140403,140457,140528,140599,140669,140738,140796,140872,140943,141017,141103,141153,141223,141288,396350,396503"
-                    }
-                },
-                {
-                    "source": "/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values/colors.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,97",
-                        "endColumns": "41,41",
-                        "endOffsets": "92,134"
-                    },
-                    "to": {
-                        "startLines": "561,880",
-                        "startColumns": "4,4",
-                        "startOffsets": "29207,52883",
-                        "endColumns": "41,41",
-                        "endOffsets": "29244,52920"
-                    }
-                },
-                {
-                    "source": "/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values/themes.xml",
-                    "from": {
-                        "startLines": "2,7",
-                        "startColumns": "4,4",
-                        "startOffsets": "100,326",
-                        "endLines": "5,7",
-                        "endColumns": "12,70",
-                        "endOffsets": "320,392"
-                    },
-                    "to": {
-                        "startLines": "2607,6618",
-                        "startColumns": "4,4",
-                        "startOffsets": "185616,466576",
-                        "endLines": "2610,6618",
-                        "endColumns": "12,69",
-                        "endOffsets": "185730,466641"
                     }
                 },
                 {

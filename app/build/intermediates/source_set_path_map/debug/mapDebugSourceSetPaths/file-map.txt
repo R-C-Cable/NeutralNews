@@ -58,10 +58,10 @@ org.neutralnews.app-savedstate-ktx-1.2.1-56 /home/robert/.gradle/caches/transfor
 org.neutralnews.app-core-runtime-2.2.0-57 /home/robert/.gradle/caches/transforms-4/f1b24ceba95a1976becaa6662c066866/transformed/core-runtime-2.2.0/res
 org.neutralnews.app-activity-ktx-1.8.2-58 /home/robert/.gradle/caches/transforms-4/f5107f79b01e05bd3e2806acabbb09fa/transformed/activity-ktx-1.8.2/res
 org.neutralnews.app-lifecycle-livedata-2.8.3-59 /home/robert/.gradle/caches/transforms-4/f95f6935fb664e888a5684ea45946084/transformed/lifecycle-livedata-2.8.3/res
-org.neutralnews.app-pngs-60 /home/robert/AndroidStudioProjects/NeutralNews/app/build/generated/res/pngs/debug
-org.neutralnews.app-resValues-61 /home/robert/AndroidStudioProjects/NeutralNews/app/build/generated/res/resValues/debug
-org.neutralnews.app-packageDebugResources-62 /home/robert/AndroidStudioProjects/NeutralNews/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
-org.neutralnews.app-packageDebugResources-63 /home/robert/AndroidStudioProjects/NeutralNews/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
-org.neutralnews.app-debug-64 /home/robert/AndroidStudioProjects/NeutralNews/app/build/intermediates/merged_res/debug/mergeDebugResources
-org.neutralnews.app-debug-65 /home/robert/AndroidStudioProjects/NeutralNews/app/src/debug/res
-org.neutralnews.app-main-66 /home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res
+org.neutralnews.app-pngs-60 /home/robert/temp/NeutralNews/app/build/generated/res/pngs/debug
+org.neutralnews.app-resValues-61 /home/robert/temp/NeutralNews/app/build/generated/res/resValues/debug
+org.neutralnews.app-packageDebugResources-62 /home/robert/temp/NeutralNews/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+org.neutralnews.app-packageDebugResources-63 /home/robert/temp/NeutralNews/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+org.neutralnews.app-debug-64 /home/robert/temp/NeutralNews/app/build/intermediates/merged_res/debug/mergeDebugResources
+org.neutralnews.app-debug-65 /home/robert/temp/NeutralNews/app/src/debug/res
+org.neutralnews.app-main-66 /home/robert/temp/NeutralNews/app/src/main/res

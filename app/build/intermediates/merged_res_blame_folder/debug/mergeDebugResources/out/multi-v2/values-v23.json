@@ -34,7 +34,7 @@
                     }
                 },
                 {
-                    "source": "/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values-v23/themes.xml",
+                    "source": "/home/robert/temp/NeutralNews/app/src/main/res/values-v23/themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

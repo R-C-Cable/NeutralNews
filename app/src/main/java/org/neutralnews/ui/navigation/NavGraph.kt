@@ -10,6 +10,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import org.neutralnews.di.ActivityLogger
+import org.neutralnews.ui.components.CenterTopBar
 import org.neutralnews.ui.screens.ArticlePage
 import org.neutralnews.ui.screens.HomePage
 
@@ -18,7 +19,8 @@ fun NavGraph(logger: ActivityLogger) {
     val navController = rememberNavController()
 
     Scaffold(
-        topBar = { TopBar(navController) }
+//        topBar = { TopBar(navController) }
+        topBar = { CenterTopBar(navController) },
     ) { innerPadding ->
         run {
             NavHost(

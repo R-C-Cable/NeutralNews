@@ -4,7 +4,7 @@
             "outputFile": "org.neutralnews.app-mergeDebugResources-62:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values-night/themes.xml",
+                    "source": "/home/robert/temp/NeutralNews/app/src/main/res/values-night/themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

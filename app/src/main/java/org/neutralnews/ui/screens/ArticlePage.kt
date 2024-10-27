@@ -1,6 +1,7 @@
 package org.neutralnews.ui.screens
 
 import android.util.Log
+import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -41,11 +42,10 @@ fun ArticlePage(navController: NavController,
         modifier = Modifier.fillMaxSize()
             .padding(16.dp)
             .verticalScroll(rememberScrollState()),
-        verticalArrangement = Arrangement.Top,
-        horizontalAlignment = Alignment.Start
+        verticalArrangement = Arrangement.spacedBy(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Log.d("ArticlePage", "Rendering ArticlePage Column")
-
         article?.let {
             Log.d("ArticlePage", "it string$it")
             Text(
@@ -53,15 +53,16 @@ fun ArticlePage(navController: NavController,
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold
             )
-            Spacer(modifier = Modifier.height(8.dp))
             it.content.forEach { content ->
                 Text(
                     content.sub_title,
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold
                 )
-                Text(content.text, style = MaterialTheme.typography.bodyMedium)
-                Spacer(modifier = Modifier.height(4.dp)) // Add space between content items
+                Text(
+                    content.text,
+                    style = MaterialTheme.typography.bodyMedium
+                )
             }
         } ?: run {
             Log.d("ArticlePage", "Article is null")

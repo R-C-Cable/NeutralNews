@@ -4,7 +4,7 @@
             "outputFile": "org.neutralnews.app-mergeDebugResources-62:/values-w600dp-v13/values-w600dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/robert/AndroidStudioProjects/NeutralNews/app/src/main/res/values-w600dp/dimens.xml",
+                    "source": "/home/robert/temp/NeutralNews/app/src/main/res/values-w600dp/dimens.xml",
                     "from": {
                         "startLines": "1",
                         "startColumns": "4",

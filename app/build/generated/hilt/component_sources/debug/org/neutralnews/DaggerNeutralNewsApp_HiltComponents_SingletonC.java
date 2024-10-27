@@ -625,7 +625,7 @@ public final class DaggerNeutralNewsApp_HiltComponents_SingletonC {
     }
 
     @Override
-    public void injectNeutralNewsApp(NeutralNewsApp neutralNewsApp) {
+    public void injectNeutralNewsApp(NeutralNewsApp arg0) {
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
