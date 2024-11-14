@@ -3,55 +3,28 @@ package org.neutralnews.data.articles
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import org.koin.core.component.KoinComponent
+import org.koin.core.component.inject
 
-class ArticlesRepository {
+//Repository should be the Interface to the DataLayer.
+class ArticlesRepository : KoinComponent {
+
+    private val articlesDataSource: ArticlesDataSource by inject()
+
+    init {
+        getArticles()
+    }
+
     fun getArticles(): Flow<List<Article>> = flow {
-        delay(3_000)
+       val articles : List<Article> = articlesDataSource.getArticles()
         //TODO: Request data from server and cache in SglDelight database.
-        emit(getMockArticles())
+        emit(articles)
     }
 
     fun getArticleById(articleId: Double): Flow<Article> = flow {
+        val article : Article = articlesDataSource.getArticleById(articleId);
         delay(3_000)
         //TODO: Request data from server and cache in SglDelight database.
-        emit(getMockArticleById())
-    }
-
-
-    fun getMockArticleById(): Article {
-        return Article(
-            123.00,
-            "Article Title",
-            "This is a summary",
-            "2024-11-09T03:17:00.648Z",
-            "2024-11-09T03:17:00.648Z",
-            listOf(
-                Content(321.00, "Subtitle here", "This is some dummy text"),
-                Content(321.00, "Subtitle here", "This is some dummy text")
-            )
-        )
-    }
-
-
-    fun getMockArticles(): List<Article> {
-        println("getMockArticles")
-        var listOfArticle = mutableListOf<Article>()
-
-        for (i in 1..5) {
-            listOfArticle.add(
-                Article(
-                    123.00,
-                    "Article Title",
-                    "This is a summary",
-                    "2024-11-09T03:17:00.648Z",
-                    "2024-11-09T03:17:00.648Z",
-                    listOf(
-                        Content(321.00, "Subtitle here", "This is some dummy text"),
-                        Content(321.00, "Subtitle here", "This is some dummy text")
-                    )
-                )
-            )
-        }
-        return listOfArticle
+        emit(article)
     }
 }

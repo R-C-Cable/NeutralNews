@@ -1,6 +1,8 @@
 package org.neutralnews.data.articles
 
-//@Serializable
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class Article(
     val id: Double,
     val title: String,
@@ -10,7 +12,7 @@ data class Article(
     val content: List<Content>
 )
 
-//@Serializable
+@Serializable
 data class Content(
     val id: Double,
     val sub_title: String,
