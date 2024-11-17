@@ -7,9 +7,9 @@ import org.neutralnews.data.articles.Article
 import org.neutralnews.data.articles.ArticlesRepository
 import org.neutralnews.ui.ViewModel
 
-class ArticleReaderViewModel(articleId: Double): ViewModel() {
+class ArticleReaderViewModel(articleId: Int): ViewModel() {
     private val repository = ArticlesRepository()
-    private val _article = mutableStateFlowOf(Article(0.0,"","","","", emptyList()))
+    private val _article = mutableStateFlowOf(Article())
     val article: StateFlow<Article> = _article.asStateFlow()
 
     init {

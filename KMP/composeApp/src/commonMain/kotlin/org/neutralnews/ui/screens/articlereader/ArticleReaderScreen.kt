@@ -22,7 +22,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
 
-class ArticleReaderScreen(private val articleId: Double) : Screen {
+class ArticleReaderScreen(private val articleId: Int) : Screen {
     @Composable
     override fun Content() {
         val viewModel: ArticleReaderViewModel =
@@ -46,20 +46,18 @@ class ArticleReaderScreen(private val articleId: Double) : Screen {
             )
             Spacer(modifier = Modifier.height(8.dp))
 
-            article.content.forEach { content ->
-                Text(
-                    text = content.sub_title,
-                    style = MaterialTheme.typography.headlineSmall,
-                    modifier = Modifier
-                        .padding(bottom = 8.dp)
-                )
-                Text(
-                    text = content.text,
-                    style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier.padding(bottom = 16.dp)
-                )
-                Spacer(modifier = Modifier.height(4.dp))
-            }
+            Text(
+                text = article.content,
+                style = MaterialTheme.typography.headlineSmall,
+                modifier = Modifier
+                    .padding(bottom = 8.dp)
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = article.sources,
+                style = MaterialTheme.typography.bodyMedium,
+                modifier = Modifier.padding(bottom = 16.dp)
+            )
         }
     }
 }

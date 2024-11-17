@@ -21,7 +21,7 @@ class ArticlesRepository : KoinComponent {
         emit(articles)
     }
 
-    fun getArticleById(articleId: Double): Flow<Article> = flow {
+    fun getArticleById(articleId: Int): Flow<Article> = flow {
         val article : Article = articlesDataSource.getArticleById(articleId);
         delay(3_000)
         //TODO: Request data from server and cache in SglDelight database.
