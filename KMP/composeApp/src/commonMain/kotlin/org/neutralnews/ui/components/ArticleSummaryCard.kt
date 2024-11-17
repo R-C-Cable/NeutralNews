@@ -19,11 +19,11 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 fun
-StorySummaryCard(title: String, summary: String, onArticleClick: () -> Unit) {
+StorySummaryCard(title: String, summary: String, articleId: Int, onArticleClick: (Int) -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable { onArticleClick() },
+            .clickable { onArticleClick(articleId) },
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Column(

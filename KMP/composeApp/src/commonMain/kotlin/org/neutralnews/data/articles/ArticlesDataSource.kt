@@ -220,6 +220,6 @@ class ArticlesDataSource (private val httpClient: HttpClient) {
 //        delay(1_000)
 //        return Json.decodeFromString<Article>(mockArticleJson)
 
-        return httpClient.get("https://neutralnews.dev/articles/3").body()
+        return httpClient.get("https://neutralnews.dev/articles/$articleId").body()
     }
 }

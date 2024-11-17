@@ -42,9 +42,11 @@ class NewsFeedScreen : Screen {
             items(if (isLoading) 10 else articles.value.size) { index ->
                 StorySummaryCard(
                     title = if (isLoading) "" else articles.value[index].title,
-                    summary = if (isLoading) "" else articles.value[index].summary
-                ) {
-                    navigator?.push(ArticleReaderScreen(articles.value[index].id)) ?: run {
+                    summary = if (isLoading) "" else articles.value[index].summary,
+                    articleId = if (isLoading) 0 else articles.value[index].id
+                ) { articleId ->
+                    println("onClick of article with id articleId $articleId")
+                    navigator?.push(ArticleReaderScreen(articleId)) ?: run {
                         println("ERROR: Failed to open Article due to null navigator.")
                     }
                 }

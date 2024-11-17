@@ -35,6 +35,7 @@ kotlin {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
             implementation(libs.ktor.client.android)
+            implementation("io.ktor:ktor-client-okhttp:2.3.3")
         }
         iosMain.dependencies {
             implementation(libs.ktor.client.darwin)
