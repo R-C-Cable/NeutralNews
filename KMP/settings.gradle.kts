@@ -1,4 +1,4 @@
-rootProject.name = "NeutralNews"
+rootProject.name = "NeutralTimes"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
