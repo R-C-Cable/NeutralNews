@@ -1,6 +1,5 @@
 package com.neutraltimes.today.articles.data.articles
 
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import org.koin.core.component.KoinComponent
@@ -10,10 +9,6 @@ import org.koin.core.component.inject
 class ArticlesRepository : KoinComponent {
 
     private val articlesDataSource: ArticlesDataSource by inject()
-
-    init {
-        getArticles()
-    }
 
     fun getArticles(): Flow<List<Article>> = flow {
         when (val result: Result<List<Article>> = articlesDataSource.getArticles()) {
