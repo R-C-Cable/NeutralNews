@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.asStateFlow
 
 open class ViewModel {
     private val viewModelJob = SupervisorJob()
-    protected val viewModelScope = CoroutineScope(Dispatchers.Main + viewModelJob)
+    protected val viewModelScope = CoroutineScope(Dispatchers.Default + viewModelJob)
 
 
     protected fun <T> mutableStateFlowOf(value: T): MutableStateFlow<T> = MutableStateFlow(value)
