@@ -22,6 +22,7 @@ class ArticlesRepository : KoinComponent {
                 emit(result.data)
             }
             is Result.Error -> {
+                //TODO: Pass error up to UI to display.
                 println("Error: ${result.statusCode}, ${result.message}")
             }
         }
@@ -33,6 +34,7 @@ class ArticlesRepository : KoinComponent {
                 emit(result.data)
             }
             is Result.Error -> {
+                //TODO: Pass error up to UI to display.
                 println("Error: ${result.statusCode}, ${result.message}")
             }
         }
