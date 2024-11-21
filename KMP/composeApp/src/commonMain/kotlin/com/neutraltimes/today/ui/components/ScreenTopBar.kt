@@ -14,7 +14,7 @@ fun ScreenTopBar() {
     val navigator = LocalNavigator.currentOrThrow
 
     CenterAlignedTopAppBar(
-        title = { Text("Neutral News") }, // Fixed title
+        title = { Text("Neutral Times") }, // Fixed title
         navigationIcon = {
             // Show back button only if there's a screen to pop
             if (navigator.canPop) {
