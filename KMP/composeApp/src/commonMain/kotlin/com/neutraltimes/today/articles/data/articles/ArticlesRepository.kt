@@ -16,14 +16,25 @@ class ArticlesRepository : KoinComponent {
     }
 
     fun getArticles(): Flow<List<Article>> = flow {
-       val articles : List<Article> = articlesDataSource.getArticles()
-        //TODO: Request data from server and cache in SglDelight database.
-        emit(articles)
+        when (val result: Result<List<Article>> = articlesDataSource.getArticles()) {
+            is Result.Success -> {
+                //TODO: Request data from server and cache in SglDelight database.
+                emit(result.data)
+            }
+            is Result.Error -> {
+                println("Error: ${result.statusCode}, ${result.message}")
+            }
+        }
     }
 
     fun getArticleById(articleId: Int): Flow<Article> = flow {
-        val article : Article = articlesDataSource.getArticleById(articleId);
-        //TODO: Request data from server and cache in SglDelight database.
-        emit(article)
+        when (val result: Result<Article> = articlesDataSource.getArticleById(articleId)) {
+            is Result.Success -> {
+                emit(result.data)
+            }
+            is Result.Error -> {
+                println("Error: ${result.statusCode}, ${result.message}")
+            }
+        }
     }
 }
