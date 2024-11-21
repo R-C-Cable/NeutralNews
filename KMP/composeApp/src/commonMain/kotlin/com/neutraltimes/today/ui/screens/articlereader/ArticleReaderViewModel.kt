@@ -14,7 +14,6 @@ class ArticleReaderViewModel(articleId: Int): ViewModel() {
 
     init {
         viewModelScope.launch {
-            println("repository.getArticles()")
             repository.getArticleById(articleId)
                 .collect { article ->
                     _article.value = article

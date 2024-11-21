@@ -13,7 +13,6 @@ class NewsFeedViewModel(private val repository: ArticlesRepository) : ViewModel(
 
     init {
         viewModelScope.launch {
-            println("repository.getArticles()")
             repository.getArticles()
                 .collect { articles ->
                     _articles.value = articles
