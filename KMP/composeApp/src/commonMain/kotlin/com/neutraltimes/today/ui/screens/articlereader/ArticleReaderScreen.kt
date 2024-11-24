@@ -17,7 +17,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
 
@@ -43,6 +43,10 @@ class ArticleReaderScreen(private val articleId: Int) : Screen {
                     .wrapContentSize(Alignment.Center)
                     .padding(bottom = 16.dp)
             )
+            Text(text = article.date,
+                style = MaterialTheme.typography.labelLarge,
+                textAlign = TextAlign.Right,
+                modifier = Modifier.fillMaxWidth())
             Spacer(modifier = Modifier.height(8.dp))
 
             Text(
