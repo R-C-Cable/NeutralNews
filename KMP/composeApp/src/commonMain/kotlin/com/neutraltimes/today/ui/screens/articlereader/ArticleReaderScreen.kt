@@ -34,6 +34,11 @@ class ArticleReaderScreen(private val articleId: Int) : Screen {
                 .padding(horizontal = 20.dp)
                 .verticalScroll(scrollState)
         ) {
+            Spacer(
+                modifier = Modifier
+                    .height(16.dp)
+                    .fillMaxWidth()
+            )
             Text(
                 text = article.title,
                 style = MaterialTheme.typography.titleLarge,
