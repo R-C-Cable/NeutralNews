@@ -8,8 +8,8 @@ import androidx.compose.ui.Modifier
 import cafe.adriel.voyager.navigator.Navigator
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.core.context.startKoin
-import com.neutraltimes.today.articles.data.articles.articlesModule
-import com.neutraltimes.today.articles.data.articles.networkModule
+import com.neutraltimes.today.data.articles.articlesModule
+import com.neutraltimes.today.data.articles.networkModule
 import com.neutraltimes.today.domain.di.domainDiModule
 import com.neutraltimes.today.ui.components.ScreenTopBar
 

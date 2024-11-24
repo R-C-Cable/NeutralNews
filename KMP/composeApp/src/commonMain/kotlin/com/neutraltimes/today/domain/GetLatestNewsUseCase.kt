@@ -1,7 +1,7 @@
 package com.neutraltimes.today.domain
 
-import com.neutraltimes.today.articles.data.articles.ArticleDto
-import com.neutraltimes.today.articles.data.articles.ArticlesRepository
+import com.neutraltimes.today.data.articles.ArticleDto
+import com.neutraltimes.today.data.articles.ArticlesRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 

@@ -1,4 +1,4 @@
-package com.neutraltimes.today.articles.data.articles
+package com.neutraltimes.today.data.articles
 
 import io.ktor.client.*
 import io.ktor.client.plugins.HttpTimeout

@@ -1,4 +1,4 @@
-package com.neutraltimes.today.articles.data.articles
+package com.neutraltimes.today.data.articles
 
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -30,7 +30,10 @@ class ArticlesDataSource (private val httpClient: HttpClient) {
                 Result.Error(response.status, "Failed to get articles")
             }
         } catch (e: Exception) {
-            Result.Error(HttpStatusCode.InternalServerError, "An unexpected error occurred: ${e.message}")
+            Result.Error(
+                HttpStatusCode.InternalServerError,
+                "An unexpected error occurred: ${e.message}"
+            )
         }
     }
 
@@ -48,7 +51,10 @@ class ArticlesDataSource (private val httpClient: HttpClient) {
                 Result.Error(response.status, "Failed to get article with id: $articleId")
             }
         } catch (e: Exception) {
-            Result.Error(HttpStatusCode.InternalServerError, "An unexpected error occurred: ${e.message}")
+            Result.Error(
+                HttpStatusCode.InternalServerError,
+                "An unexpected error occurred: ${e.message}"
+            )
         }
     }
 }

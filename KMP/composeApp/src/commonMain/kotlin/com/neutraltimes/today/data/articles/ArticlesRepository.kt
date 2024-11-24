@@ -1,4 +1,4 @@
-package com.neutraltimes.today.articles.data.articles
+package com.neutraltimes.today.data.articles
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow

@@ -3,7 +3,6 @@ package com.neutraltimes.today.ui.screens.newsfeed
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import com.neutraltimes.today.articles.data.articles.ArticleDto
 import com.neutraltimes.today.domain.Article
 import com.neutraltimes.today.domain.GetLatestNewsUseCase
 import com.neutraltimes.today.ui.ViewModel
