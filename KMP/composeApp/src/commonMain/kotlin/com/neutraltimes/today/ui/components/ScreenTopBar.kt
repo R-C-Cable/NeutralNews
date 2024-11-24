@@ -1,5 +1,6 @@
 package com.neutraltimes.today.ui.components
 
+import androidx.compose.foundation.background
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
@@ -15,11 +16,22 @@ fun ScreenTopBar() {
     val navigator = LocalNavigator.currentOrThrow
 
     CenterAlignedTopAppBar(
-        title = { Text("Neutral Times") }, // Fixed title
+        title = {
+            Text(
+                "Neutral Times",
+                color = MaterialTheme.colorScheme.onSecondary
+            )
+        }, // Fixed title
+        colors = TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor = MaterialTheme.colorScheme.secondary),
         navigationIcon = {
             // Show back button only if there's a screen to pop
             if (navigator.canPop) {
-                IconButton(onClick = { navigator.pop() }) {
+                IconButton(
+                    onClick = { navigator.pop() },
+                    colors = IconButtonDefaults.iconButtonColors(
+                        contentColor = MaterialTheme.colorScheme.onSecondary
+                    )
+                ) {
                     Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                 }
             }

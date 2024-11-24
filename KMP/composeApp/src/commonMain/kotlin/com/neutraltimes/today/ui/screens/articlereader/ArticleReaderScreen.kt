@@ -31,7 +31,7 @@ class ArticleReaderScreen(private val articleId: Int) : Screen {
 
         Column(
             modifier = Modifier
-                .padding(20.dp)
+                .padding(horizontal = 20.dp)
                 .verticalScroll(scrollState)
         ) {
             Text(

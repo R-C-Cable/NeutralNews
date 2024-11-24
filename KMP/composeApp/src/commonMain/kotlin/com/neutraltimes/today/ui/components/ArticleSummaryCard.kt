@@ -29,6 +29,7 @@ StorySummaryCard(title: String,
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onArticleClick(articleId) },
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceContainerHigh),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Column(
