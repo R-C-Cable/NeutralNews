@@ -27,5 +27,6 @@ val networkModule = module {
 }
 
 val articlesModule = module {
+    single { ArticlesRepository(articlesDataSource = get()) }
     single<ArticlesDataSource> { ArticlesDataSource(get()) }
 }

@@ -17,7 +17,7 @@ class ArticlesDataSource (private val httpClient: HttpClient) {
     private val baseUrl: String = "https://neutralnews.dev"
 
 
-    suspend fun getArticles(): Result<List<Article>> {
+    suspend fun getArticles(): Result<List<ArticleDto>> {
         return try {
             val response = httpClient.get("$baseUrl/articles")
             if (response.status.isSuccess()) {
@@ -34,7 +34,7 @@ class ArticlesDataSource (private val httpClient: HttpClient) {
         }
     }
 
-    suspend fun getArticleById(articleId: Int): Result<Article> {
+    suspend fun getArticleById(articleId: Int): Result<ArticleDto> {
         return try {
             val response = httpClient.get("$baseUrl/articles/$articleId")
 

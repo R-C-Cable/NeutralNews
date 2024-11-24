@@ -7,8 +7,9 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import org.koin.core.component.KoinComponent
 
-open class ViewModel {
+open class ViewModel: KoinComponent {
     private val viewModelJob = SupervisorJob()
     protected val viewModelScope = CoroutineScope(Dispatchers.Default + viewModelJob)
 

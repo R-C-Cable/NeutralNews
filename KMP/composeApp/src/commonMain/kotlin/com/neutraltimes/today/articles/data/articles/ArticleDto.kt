@@ -3,7 +3,7 @@ package com.neutraltimes.today.articles.data.articles
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Article(
+data class ArticleDto(
     val id: Int,
     val title: String,
     val summary: String,
@@ -12,6 +12,6 @@ data class Article(
     val content: String,
     val sources: String
 ) {
-    constructor() : this(0, "", "", "", "", "", "")
+    constructor() : this(0, "/n", "/n", "", "", "", "")
 }
 

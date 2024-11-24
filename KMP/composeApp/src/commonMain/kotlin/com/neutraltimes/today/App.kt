@@ -10,26 +10,28 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.core.context.startKoin
 import com.neutraltimes.today.articles.data.articles.articlesModule
 import com.neutraltimes.today.articles.data.articles.networkModule
+import com.neutraltimes.today.domain.di.domainDiModule
 import com.neutraltimes.today.ui.components.ScreenTopBar
 
 import com.neutraltimes.today.ui.screens.newsfeed.NewsFeedScreen
+import org.koin.core.component.KoinComponent
 
-//TODO implement a proper solution.
-// We should not need this boolean.
-var koinInitialized = false;
+object App: KoinComponent {
+    init {
+        startKoin {
+            modules(
+                networkModule,
+                articlesModule,
+                domainDiModule
+            )
+        }
+    }
+}
 
 @Composable
 @Preview
 fun App() {
-    if (!koinInitialized) {
-        startKoin {
-            modules(
-                networkModule,
-                articlesModule
-            )
-        }
-        koinInitialized = true;
-    }
+    App // Access the App Koin Component to trigger the singleton init block.
 
     Navigator(NewsFeedScreen()) { navigator ->
         Scaffold(topBar = { ScreenTopBar() }) { innerPadding ->

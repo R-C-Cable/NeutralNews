@@ -2,16 +2,12 @@ package com.neutraltimes.today.articles.data.articles
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import org.koin.core.component.KoinComponent
-import org.koin.core.component.inject
 
-//Repository should be the Interface to the DataLayer.
-class ArticlesRepository : KoinComponent {
+class ArticlesRepository(private val articlesDataSource: ArticlesDataSource) {
 
-    private val articlesDataSource: ArticlesDataSource by inject()
-
-    fun getArticles(): Flow<List<Article>> = flow {
-        when (val result: Result<List<Article>> = articlesDataSource.getArticles()) {
+    fun getArticles(): Flow<List<ArticleDto>> = flow {
+        println("getArticles called")
+        when (val result: Result<List<ArticleDto>> = articlesDataSource.getArticles()) {
             is Result.Success -> {
                 //TODO: Request data from server and cache in SglDelight database.
                 emit(result.data)
@@ -23,8 +19,9 @@ class ArticlesRepository : KoinComponent {
         }
     }
 
-    fun getArticleById(articleId: Int): Flow<Article> = flow {
-        when (val result: Result<Article> = articlesDataSource.getArticleById(articleId)) {
+    fun getArticleById(articleId: Int): Flow<ArticleDto> = flow {
+        println("getArticleById called")
+        when (val result: Result<ArticleDto> = articlesDataSource.getArticleById(articleId)) {
             is Result.Success -> {
                 emit(result.data)
             }

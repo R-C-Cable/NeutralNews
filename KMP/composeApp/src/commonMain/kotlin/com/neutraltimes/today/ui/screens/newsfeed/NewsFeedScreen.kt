@@ -7,24 +7,22 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.remember
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
 import cafe.adriel.voyager.navigator.LocalNavigator
-import com.neutraltimes.today.articles.data.articles.ArticlesRepository
 import com.neutraltimes.today.ui.components.StorySummaryCard
 import com.neutraltimes.today.ui.screens.articlereader.ArticleReaderScreen
 
 class NewsFeedScreen : Screen {
+    private val viewModel: NewsFeedViewModel = NewsFeedViewModel()
+
     init {
         println("NewsFeedScreen")
     }
 
-
     @Composable
     override fun Content() {
         val navigator = LocalNavigator.current
-        val viewModel: NewsFeedViewModel = remember { NewsFeedViewModel(ArticlesRepository()) }
         val articles = viewModel.articles.collectAsState()
         val isLoading = articles.value.isEmpty()
 
@@ -43,6 +41,7 @@ class NewsFeedScreen : Screen {
                 StorySummaryCard(
                     title = if (isLoading) "" else articles.value[index].title,
                     summary = if (isLoading) "" else articles.value[index].summary,
+                    date = if (isLoading) "" else articles.value[index].date,
                     articleId = if (isLoading) 0 else articles.value[index].id
                 ) { articleId ->
                     println("onClick of article with id articleId $articleId")

@@ -16,6 +16,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.core.screen.Screen
@@ -24,7 +25,7 @@ class ArticleReaderScreen(private val articleId: Int) : Screen {
     @Composable
     override fun Content() {
         val viewModel: ArticleReaderViewModel =
-            remember { ArticleReaderViewModel(articleId) } // Pass articleId
+            remember { ArticleReaderViewModel(articleId) }
         val article by viewModel.article.collectAsState()
         val scrollState = rememberScrollState()
 
@@ -35,8 +36,8 @@ class ArticleReaderScreen(private val articleId: Int) : Screen {
         ) {
             Text(
                 text = article.title,
-                style = MaterialTheme.typography.headlineLarge,
-                textDecoration = TextDecoration.Underline,
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier
                     .fillMaxWidth()
                     .wrapContentSize(Alignment.Center)
@@ -46,14 +47,14 @@ class ArticleReaderScreen(private val articleId: Int) : Screen {
 
             Text(
                 text = article.content,
-                style = MaterialTheme.typography.headlineSmall,
+                style = MaterialTheme.typography.bodyLarge,
                 modifier = Modifier
                     .padding(bottom = 8.dp)
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(
                 text = article.sources,
-                style = MaterialTheme.typography.bodyMedium,
+                style = MaterialTheme.typography.bodySmall,
                 modifier = Modifier.padding(bottom = 16.dp)
             )
         }
