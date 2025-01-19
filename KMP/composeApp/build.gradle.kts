@@ -27,51 +27,89 @@ kotlin {
             isStatic = true
         }
     }
+
+    val authValue = project.properties["auth"]?.toString() ?: System.getenv("AUTH_KEY") ?: ""
     
     sourceSets {
-        androidMain.dependencies {
-            implementation(compose.preview)
-            implementation(libs.androidx.activity.compose)
-            implementation(libs.ktor.client.okhttp)
+
+        val commonMain by getting {
+            kotlin.srcDirs("src/commonMain/kotlin", "build/generated/auth")
+
+            dependencies {
+                implementation(compose.runtime)
+                implementation(compose.foundation)
+                implementation(compose.material)
+                implementation(compose.ui)
+                implementation(compose.components.resources)
+                implementation(compose.components.uiToolingPreview)
+                implementation(libs.androidx.lifecycle.viewmodel)
+                implementation(libs.androidx.lifecycle.runtime.compose)
+
+
+                implementation(libs.koin.core)
+                implementation(libs.ktor.client.core)
+                implementation(libs.ktor.client.content.negotiation)
+                implementation(libs.ktor.serialization.kotlinx.json)
+
+                implementation(libs.voyager.navigator)
+                implementation(libs.voyager.screenmodel)
+                implementation(libs.voyager.bottom.sheet.navigator)
+                implementation(libs.voyager.tab.navigator)
+                implementation(libs.voyager.transitions)
+
+                implementation(libs.kotlinx.coroutines.core)
+
+                implementation(libs.ui)
+                implementation(libs.material3)
+
+                implementation(libs.kotlinx.coroutines.core)
+
+                implementation(libs.ktor.client.core)
+                implementation(libs.ktor.client.content.negotiation)
+                implementation(libs.ktor.serialization.kotlinx.json)
+                implementation(libs.koin.core)
+                implementation(libs.kotlinx.datetime)
+            }
+
         }
-        iosMain.dependencies {
-            implementation(libs.ktor.client.darwin)
+
+        val androidMain by getting {
+            dependencies {
+                implementation(compose.preview)
+                implementation(libs.androidx.activity.compose)
+                implementation(libs.ktor.client.okhttp)
+            }
         }
-        commonMain.dependencies {
-            implementation(compose.runtime)
-            implementation(compose.foundation)
-            implementation(compose.material)
-            implementation(compose.ui)
-            implementation(compose.components.resources)
-            implementation(compose.components.uiToolingPreview)
-            implementation(libs.androidx.lifecycle.viewmodel)
-            implementation(libs.androidx.lifecycle.runtime.compose)
 
-
-            implementation(libs.koin.core)
-            implementation(libs.ktor.client.core)
-            implementation(libs.ktor.client.content.negotiation)
-            implementation(libs.ktor.serialization.kotlinx.json)
-
-            implementation(libs.voyager.navigator)
-            implementation(libs.voyager.screenmodel)
-            implementation(libs.voyager.bottom.sheet.navigator)
-            implementation(libs.voyager.tab.navigator)
-            implementation(libs.voyager.transitions)
-
-            implementation(libs.kotlinx.coroutines.core)
-
-            implementation(libs.ui)
-            implementation(libs.material3)
-
-            implementation(libs.kotlinx.coroutines.core)
-
-            implementation(libs.ktor.client.core)
-            implementation(libs.ktor.client.content.negotiation)
-            implementation(libs.ktor.serialization.kotlinx.json)
-            implementation(libs.koin.core)
-            implementation(libs.kotlinx.datetime)
+        val iosMain by creating {
+            dependencies {
+                implementation(libs.ktor.client.darwin)
+            }
         }
+    }
+
+    tasks.register("generateAuthFile") {
+        val outputDir = File(project.buildDir, "generated/auth/com/neutraltimes/today")
+        outputs.dir(outputDir)
+
+        doLast {
+            outputDir.mkdirs()
+            val authFile = File(outputDir, "Auth.kt")
+            authFile.writeText(
+                """
+                package com.neutraltimes.today
+
+                object Auth {
+                    const val KEY = "$authValue"
+                }
+                """.trimIndent()
+            )
+        }
+    }
+
+    // Make generateAuthFile a dependency of the preBuild task
+    tasks.named("preBuild").configure {
+        dependsOn("generateAuthFile")
     }
 }
 

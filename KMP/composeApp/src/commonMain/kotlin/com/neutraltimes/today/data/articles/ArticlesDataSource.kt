@@ -1,5 +1,6 @@
 package com.neutraltimes.today.data.articles
 
+import com.neutraltimes.today.Auth
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
@@ -14,11 +15,12 @@ sealed class Result<out T> {
 }
 
 class ArticlesDataSource (private val httpClient: HttpClient) {
-    private val baseUrl: String = "https://neutralnews.dev"
+    private val baseUrl: String = "https://@neutralnews.dev?api_key=${Auth.KEY}"
 
 
     suspend fun getArticles(): Result<List<ArticleDto>> {
         return try {
+            val requestUrl = "$baseUrl/articles"
             val response = httpClient.get("$baseUrl/articles")
             if (response.status.isSuccess()) {
                 //TODO: This is a testing log and should be removed
@@ -26,7 +28,7 @@ class ArticlesDataSource (private val httpClient: HttpClient) {
                 Result.Success(response.body())
             } else {
                 //TODO: This should be replaced with some sort of remote monitoring logging system
-                println("Error fetching articles: ${response.status}")
+                println("Error fetching articles: ${response}")
                 Result.Error(response.status, "Failed to get articles")
             }
         } catch (e: Exception) {
