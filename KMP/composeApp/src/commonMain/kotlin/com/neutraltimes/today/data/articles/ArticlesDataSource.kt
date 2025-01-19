@@ -15,13 +15,14 @@ sealed class Result<out T> {
 }
 
 class ArticlesDataSource (private val httpClient: HttpClient) {
-    private val baseUrl: String = "https://@neutralnews.dev?api_key=${Auth.KEY}"
+    private val baseUrl: String = "https://@neutralnews.dev"
+    private val authKey: String = "?api_key=${Auth.KEY}"
 
 
     suspend fun getArticles(): Result<List<ArticleDto>> {
         return try {
             val requestUrl = "$baseUrl/articles"
-            val response = httpClient.get("$baseUrl/articles")
+            val response = httpClient.get("$baseUrl/articles$authKey")
             if (response.status.isSuccess()) {
                 //TODO: This is a testing log and should be removed
                 println("getArticles response: $response")
@@ -41,7 +42,7 @@ class ArticlesDataSource (private val httpClient: HttpClient) {
 
     suspend fun getArticleById(articleId: Int): Result<ArticleDto> {
         return try {
-            val response = httpClient.get("$baseUrl/articles/$articleId")
+            val response = httpClient.get("$baseUrl/articles/$articleId$authKey")
 
             if (response.status.isSuccess()) {
                 //TODO: This is a testing log and should be removed
